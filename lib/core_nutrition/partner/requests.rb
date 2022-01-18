@@ -1,7 +1,7 @@
 require File.expand_path('../requests/directory', __FILE__)
 
-# Framework
-require File.expand_path('../requests/athlete_level_types', __FILE__)
+# Guidance
+require File.expand_path('../requests/guidance', __FILE__)
 
 module CoreNutrition
   module Partner

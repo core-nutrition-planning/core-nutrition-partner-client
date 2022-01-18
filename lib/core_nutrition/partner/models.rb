@@ -13,8 +13,9 @@ require File.expand_path('../models/link', __FILE__)
 # Framework
 require File.expand_path('../models/unit', __FILE__)
 
-require File.expand_path('../models/athlete_level_types', __FILE__)
-require File.expand_path('../models/athlete_level_type', __FILE__)
+# Guidance
+require File.expand_path('../models/guidance', __FILE__)
+
 
 module CoreNutrition
   module Partner
