@@ -47,4 +47,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency('addressable')
   spec.add_dependency('restless_router')
   spec.add_dependency("terminal-table")
+  spec.add_dependency("countries")
+  spec.add_dependency("money")
 end

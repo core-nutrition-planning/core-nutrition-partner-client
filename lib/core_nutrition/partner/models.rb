@@ -9,6 +9,8 @@ require File.expand_path('../models/error_item', __FILE__)
 require File.expand_path('../models/links', __FILE__)
 require File.expand_path('../models/link', __FILE__)
 
+require File.expand_path('../models/price', __FILE__)
+
 
 # Framework
 require File.expand_path('../models/unit', __FILE__)

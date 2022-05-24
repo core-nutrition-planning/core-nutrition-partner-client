@@ -8,6 +8,8 @@ require 'multi_json'
 require 'restless_router'
 require 'core_nutrition/partner/client/version'
 
+require 'core_nutrition/money'
+
 require 'core_nutrition/partner/errors'
 require 'core_nutrition/partner/logger'
 require 'core_nutrition/partner/configuration'

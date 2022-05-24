@@ -37,6 +37,14 @@ module CoreNutrition
             @attributes['carbohydrates_amount']
           end
 
+          def price_attributes
+            @attributes.fetch('price', {})
+          end
+
+          def price
+            CoreNutrition::Partner::Models::Price.new(self.price_attributes)
+          end
+
           # Returns the links attributes
           #
           # @return [Array]
