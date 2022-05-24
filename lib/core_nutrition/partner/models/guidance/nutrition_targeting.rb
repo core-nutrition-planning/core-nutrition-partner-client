@@ -73,6 +73,18 @@ module CoreNutrition
             @attributes['duration_minutes']
           end
 
+          def channel_id
+            @attributes['channel_id']
+          end
+
+          def channel
+            @channel ||= CoreNutrition::Partner::Models::Guidance::Channels.retrieve(self.channel_id)
+          end
+
+          def channel?
+            !self.channel.nil?
+          end
+
           def goal_record_id
             @attributes['goal_record_id']
           end
