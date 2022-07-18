@@ -121,6 +121,18 @@ module CoreNutrition
             !self.athlete_level_type.nil?
           end
 
+          def distance_unit_type_id
+            @attributes['distance_unit_type_id']
+          end
+
+          def distance_unit_type
+            @distance_unit_type ||= CoreNutrition::Partner::Models::Guidance::DistanceUnitTypes.retrieve(self.distance_unit_type_id)
+          end
+
+          def distance_unit_type?
+            !self.distance_unit_type.nil?
+          end
+
           def nutrition_products_attributes
             @attributes.fetch('nutrition_products', [])
           end
