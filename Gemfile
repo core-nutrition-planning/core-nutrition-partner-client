@@ -8,3 +8,5 @@ gemspec
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
+
+gem 'n2-client', git: 'git@github.com:core-nutrition-planning/n2-client-ruby', branch: 'main'

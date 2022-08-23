@@ -1,3 +1,23 @@
+GIT
+  remote: git@github.com:core-nutrition-planning/n2-client-ruby
+  revision: d97cc8d8275b3e1946c63f0709e0c04a133ca32c
+  branch: main
+  specs:
+    n2-client (0.1.0)
+      addressable
+      countries
+      dotenv
+      faraday
+      faraday_middleware
+      liquid
+      mime-types
+      mimemagic
+      mini_magick
+      money
+      multi_json
+      restless_router
+      terminal-table
+
 PATH
   remote: .
   specs:
@@ -20,8 +40,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     concurrent-ruby (1.1.10)
     countries (4.2.3)
       i18n_data (~> 0.16.0)
@@ -29,8 +49,8 @@ GEM
     crack (0.4.5)
       rexml
     diff-lcs (1.5.0)
-    dotenv (2.7.6)
-    faraday (1.9.3)
+    dotenv (2.8.1)
+    faraday (1.10.2)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -46,8 +66,8 @@ GEM
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.3)
-      multipart-post (>= 1.2, < 3)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
@@ -56,24 +76,26 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     hashdiff (1.0.1)
-    i18n (1.10.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     i18n_data (0.16.0)
       simple_po_parser (~> 1.1)
     jwt (2.3.0)
+    liquid (5.3.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mimemagic (0.4.3)
       nokogiri (~> 1)
       rake
+    mini_magick (4.11.0)
     money (6.16.0)
       i18n (>= 0.6.4, <= 2)
     multi_json (1.15.0)
-    multipart-post (2.1.1)
-    nokogiri (1.13.1-x86_64-darwin)
+    multipart-post (2.2.3)
+    nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
-    public_suffix (4.0.6)
+    public_suffix (5.0.0)
     racc (1.6.0)
     rake (13.0.6)
     restless_router (0.0.3)
@@ -99,7 +121,7 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     timezone (1.3.15)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.2.0)
     webmock (3.14.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -114,6 +136,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (>= 2.2.10)
   core_nutrition-partner-client!
+  n2-client!
   rake (~> 13.0)
   rspec (~> 3.0)
   webmock
