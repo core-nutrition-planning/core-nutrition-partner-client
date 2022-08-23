@@ -45,6 +45,25 @@ module CoreNutrition
             CoreNutrition::Partner::Models::Price.new(self.price_attributes)
           end
 
+          def partner_type
+            @attributes['partner_type']
+          end
+
+          def partner_data_attributes
+            @attributes['partner_data']
+          end
+
+          def partner_data
+            case(self.partner_type)
+            when('neversecond')
+              N2::Models::Item.new(self.partner_data_attributes)
+            end
+          end
+
+          def partner_data?
+            !self.partner_data.nil?
+          end
+
           # Returns the links attributes
           #
           # @return [Array]

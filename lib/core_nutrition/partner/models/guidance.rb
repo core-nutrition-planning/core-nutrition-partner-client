@@ -18,6 +18,7 @@ require File.expand_path('../guidance/channels', __FILE__)
 require File.expand_path('../guidance/channel', __FILE__)
 
 require File.expand_path('../guidance/carbohydrates_target', __FILE__)
+require File.expand_path('../guidance/partner_target', __FILE__)
 
 require File.expand_path('../guidance/nutrition_targeting', __FILE__)
 

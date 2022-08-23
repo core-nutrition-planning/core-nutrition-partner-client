@@ -47,6 +47,20 @@ module CoreNutrition
             end
           end
 
+          def partner_attributes
+            @attributes.fetch('partner', {})
+          end
+
+          def partner_attributes?
+            !self.partner_attributes.empty?
+          end
+
+          def partner_target
+            if self.partner_attributes?
+              CoreNutrition::Partner::Models::Guidance::PartnerTarget.new(self.partner_attributes)
+            end
+          end
+
           def carbohydrates_attributes
             @attributes.fetch('carbohydrates', {})
           end
