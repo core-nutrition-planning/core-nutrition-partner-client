@@ -152,7 +152,7 @@ module CoreNutrition
           end
 
           def nutrition_products
-            CoreNutrition::Partner::Models::Guidance::NutritionProducts.new(self.nutrition_products_attributes)
+            @nutrition_products ||= CoreNutrition::Partner::Models::Guidance::NutritionProducts.new(self.nutrition_products_attributes)
           end
 
           def nutrition_products?
