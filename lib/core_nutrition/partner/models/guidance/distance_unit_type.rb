@@ -62,7 +62,7 @@ module CoreNutrition
           end
 
           def to_option
-            [self.name, self.id]
+            [self.label, self.id]
           end
         end
       end
