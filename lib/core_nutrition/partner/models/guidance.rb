@@ -14,6 +14,9 @@ require File.expand_path('../guidance/mass_unit_type', __FILE__)
 require File.expand_path('../guidance/goal_records', __FILE__)
 require File.expand_path('../guidance/goal_record', __FILE__)
 
+require File.expand_path('../guidance/sweat_rate_types', __FILE__)
+require File.expand_path('../guidance/sweat_rate_type', __FILE__)
+
 require File.expand_path('../guidance/event_types', __FILE__)
 require File.expand_path('../guidance/event_type', __FILE__)
 
