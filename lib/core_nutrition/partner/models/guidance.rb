@@ -8,6 +8,9 @@ require File.expand_path('../guidance/distance_unit_type', __FILE__)
 require File.expand_path('../guidance/temperature_unit_types', __FILE__)
 require File.expand_path('../guidance/temperature_unit_type', __FILE__)
 
+require File.expand_path('../guidance/mass_unit_types', __FILE__)
+require File.expand_path('../guidance/mass_unit_type', __FILE__)
+
 require File.expand_path('../guidance/goal_records', __FILE__)
 require File.expand_path('../guidance/goal_record', __FILE__)
 
