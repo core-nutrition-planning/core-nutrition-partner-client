@@ -21,12 +21,43 @@ module CoreNutrition
             @attributes['id']
           end
 
+          # Returns the name
+          #
+          # @return [String]
           def name
             @attributes['name']
           end
 
+          # Returns the label
+          #
+          # @return [String]
           def label
             @attributes['label']
+          end
+
+          # Returns the unit name
+          #
+          # @return [String]
+          def unit_name
+            @attributes['unit_name']
+          end
+
+          # Returns the base unit
+          #
+          # @return [RubyUnits::Unit,NilClass]
+          def base_unit
+            begin
+              RubyUnits::Unit.new(self.unit_name)
+            rescue
+              nil
+            end
+          end
+
+          # Returns true if there is a base unit
+          #
+          # @return [Boolean]
+          def base_unit?
+            !self.base_unit.nil?
           end
 
           # Returns the links attributes
