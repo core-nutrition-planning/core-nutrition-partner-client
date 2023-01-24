@@ -60,6 +60,17 @@ module CoreNutrition
             !self.base_unit.nil?
           end
 
+          # Returns the unit for the value
+          #
+          # @return [RubyUnits::Unit,NilClass]
+          def unit_for(value)
+            begin
+              RubyUnits::Unit.new("%s %s" % [value, self.unit_name])
+            rescue
+              nil
+            end
+          end
+
           # Returns the links attributes
           #
           # @return [Array]
