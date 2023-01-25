@@ -79,6 +79,20 @@ module CoreNutrition
             !self.carbohydrates_target.nil?
           end
 
+          def hydration_attributes
+            @attributes.fetch('hydration', {})
+          end
+
+          def hydration_attributes?
+            !self.hydration_attributes.empty?
+          end
+
+          def hydration_target
+            if self.hydration_attributes?
+              CoreNutrition::Partner::Models::Guidance::HydrationTarget.new(self.hydration_attributes)
+            end
+          end
+
           def duration_hours
             @attributes['duration_hours']
           end
@@ -145,6 +159,34 @@ module CoreNutrition
 
           def distance_unit_type?
             !self.distance_unit_type.nil?
+          end
+
+          def weight
+            @attributes['weight']
+          end
+
+          def mass_unit_type_id
+            @attributes['mass_unit_type_id']
+          end
+
+          def mass_unit_type
+            @mass_unit_type ||= CoreNutrition::Partner::Models::Guidance::MassUnitTypes.retrieve(self.mass_unit_type_id)
+          end
+
+          def mass_unit_type?
+            !self.mass_unit_type.nil?
+          end
+
+          def temperature
+            @attributes['temperature']
+          end
+
+          def temperature_unit_type_id
+            @attributes['temperature_unit_type_id']
+          end
+
+          def temperature_unit_type
+            @temperature_unit_type ||= CoreNutrition::Partner::Models::TemperatureUnitTypes.retrieve(self.temperature_unit_type_id)
           end
 
           def nutrition_products_attributes
