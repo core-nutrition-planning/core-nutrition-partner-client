@@ -2,14 +2,14 @@ module CoreNutrition
   module Partner
     module Models
       module Guidance
-        class DistanceUnitType
+        class TemperatureUnitType
           include Comparable
 
-          # Returns an instance of the Distance Unit Type
+          # Returns an instance of the Temperature Unit Type
           #
           # @param attributes [Hash]
           #
-          # @return [CoreNutrition::Partner::Models::Guidance::DistanceUnitType]
+          # @return [CoreNutrition::Partner::Models::Guidance::TemperatureUnitType]
           def initialize(attributes={})
             @attributes = attributes
           end

@@ -2,14 +2,14 @@ module CoreNutrition
   module Partner
     module Models
       module Guidance
-        class DistanceUnitType
+        class MassUnitType
           include Comparable
 
-          # Returns an instance of the Distance Unit Type
+          # Returns an instance of the Mass Unit Type
           #
           # @param attributes [Hash]
           #
-          # @return [CoreNutrition::Partner::Models::Guidance::DistanceUnitType]
+          # @return [CoreNutrition::Partner::Models::Guidance::MassUnitType]
           def initialize(attributes={})
             @attributes = attributes
           end

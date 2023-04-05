@@ -2,14 +2,14 @@ module CoreNutrition
   module Partner
     module Models
       module Guidance
-        class DistanceUnitType
+        class SweatRateType
           include Comparable
 
-          # Returns an instance of the Distance Unit Type
+          # Returns an instance of the Athlete Level Type
           #
           # @param attributes [Hash]
           #
-          # @return [CoreNutrition::Partner::Models::Guidance::DistanceUnitType]
+          # @return [CoreNutrition::Partner::Models::Guidance::SweatRateType]
           def initialize(attributes={})
             @attributes = attributes
           end
@@ -21,54 +21,12 @@ module CoreNutrition
             @attributes['id']
           end
 
-          # Returns the name
-          #
-          # @return [String]
           def name
             @attributes['name']
           end
 
-          # Returns the label
-          #
-          # @return [String]
           def label
             @attributes['label']
-          end
-
-          # Returns the unit name
-          #
-          # @return [String]
-          def unit_name
-            @attributes['unit_name']
-          end
-
-          # Returns the base unit
-          #
-          # @return [RubyUnits::Unit,NilClass]
-          def base_unit
-            begin
-              RubyUnits::Unit.new(self.unit_name)
-            rescue
-              nil
-            end
-          end
-
-          # Returns true if there is a base unit
-          #
-          # @return [Boolean]
-          def base_unit?
-            !self.base_unit.nil?
-          end
-
-          # Returns the unit for the value
-          #
-          # @return [RubyUnits::Unit,NilClass]
-          def unit_for(value)
-            begin
-              RubyUnits::Unit.new("%s %s" % [value, self.unit_name])
-            rescue
-              nil
-            end
           end
 
           # Returns the links attributes
